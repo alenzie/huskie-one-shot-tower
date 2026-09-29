@@ -52,10 +52,10 @@ export default function SkyscraperExperience() {
         }}
       >
         <color attach="background" args={['#07111d']} />
-        <fog attach="fog" args={['#07111d', 62, 130]} />
-        <PerspectiveCamera makeDefault fov={37} near={0.1} far={220} position={[34, 12, 42]} />
+        <fog attach="fog" args={['#07111d', 140, 300]} />
+        <PerspectiveCamera makeDefault fov={37} near={0.1} far={450} position={[75, 42, 93]} />
         <SceneLighting />
-        <Stars radius={110} depth={45} count={1000} factor={2.4} saturation={0.15} fade speed={0.2} />
+        <Stars radius={220} depth={60} count={1000} factor={2.4} saturation={0.15} fade speed={0.2} />
 
         <Suspense fallback={null}>
           <Tower />
@@ -63,10 +63,10 @@ export default function SkyscraperExperience() {
         </Suspense>
 
         <OrbitControls
-          target={[0, 29, 0]}
+          target={[0, 36, 0]}
           enablePan={false}
           minDistance={24}
-          maxDistance={82}
+          maxDistance={150}
           minPolarAngle={Math.PI * 0.23}
           maxPolarAngle={Math.PI * 0.51}
           autoRotate
